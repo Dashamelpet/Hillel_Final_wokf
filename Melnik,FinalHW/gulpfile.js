@@ -23,7 +23,7 @@ gulp.task('serve', function(done) {
         server: ""
     });
 
-    gulp.watch("sass/*.sass", gulp.series('sass'));
+    gulp.watch("sass/**/*.sass", gulp.series('sass'));
     gulp.watch("*.html").on('change', () => {
         browserSync.reload();
         done();
